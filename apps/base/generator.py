@@ -1,11 +1,14 @@
 from faker import Faker
+
 fake = Faker("en_US")
+
 
 def user_profile():
     login = fake.name()
     email = fake.email()
     password = fake.password()
-    return f'{login}, {password}, {email}'
+    return f"{login}, {password}, {email}"
+
 
 # # def generate_users():
 # from faker import Faker

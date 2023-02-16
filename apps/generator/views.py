@@ -3,7 +3,7 @@ from django.shortcuts import render
 from faker import Faker
 import secrets
 
-fake = Faker('en_US')
+fake = Faker("en_US")
 
 
 def index(request: WSGIRequest):
@@ -12,10 +12,10 @@ def index(request: WSGIRequest):
     password = fake.password(7)
     return render(
         request=request,
-        template_name='index.html',
+        template_name="index.html",
         context={
-            'email': email,
-            'login': login,
-            'password': password,
-        }
+            "email": email,
+            "login": login,
+            "password": password,
+        },
     )
