@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class HumanGeneratorConfig(AppConfig):
+class ContactGeneratorConfig(AppConfig):
     default_auto_field = "django.db.models.BigAutoField"
-    name = "apps.human_generator"
+    name = "apps.contact_generator"
