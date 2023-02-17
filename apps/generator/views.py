@@ -12,7 +12,7 @@ def index(request: WSGIRequest):
     password = fake.password(7)
     return render(
         request=request,
-        template_name="index.html",
+        template_name="contacts/contacts_list.html",
         context={
             "email": email,
             "login": login,

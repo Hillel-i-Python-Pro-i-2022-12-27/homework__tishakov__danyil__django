@@ -1,0 +1,12 @@
+{% extend '_helpers/_base.html' %}
+
+{% block contenet %}
+    <ul>
+        {% for contact in contacts %}
+        <li>
+            <span>{{ contact.name }} }}</span>
+            <span> - </span>>
+            <span>{{ contact.number }}</span>
+        </li>>
+    </ul>
+{% endblock %}
