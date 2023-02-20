@@ -1,10 +1,14 @@
 from django.shortcuts import render
 
+from apps.contact_generator.models import Contact
+
+
 def list_contacts(request):
     return render(
-        request,
-        template_name='contacts/contacts_list.html',
-        # context_instance={
-        #     'contacts': Contact.objects.all()
-        # }
+        request=request,
+        template_name='db_view/db_view.html',
+        context={
+            'contacts': Contact.objects.all(),
+
+        }
     )

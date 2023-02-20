@@ -1,12 +1,12 @@
-{% extend '_helpers/_base.html' %}
-
-{% block contenet %}
-    <ul>
-        {% for contact in contacts %}
-        <li>
-            <span>{{ contact.name }} }}</span>
-            <span> - </span>>
-            <span>{{ contact.number }}</span>
-        </li>>
-    </ul>
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p> USER LOGIN: {{ login }} </p>
+    <p> USER EMAIL: {{ email }} </p>
+    <p> USER PASSWORD: {{ password }}</p>
+</body>
+</html>

@@ -68,10 +68,10 @@ migrations:
 
 .PHONY: migrate
 #Migrate
-migrations:
+migrate:
 	@python manage.py migrate
 
 .PHONY: django-i-generator-contact-i-100
 #Cenerate 100 contact(name, number)
 django-i-generator-contact-i-100:
-	@python manage.py generate genarate_contacts --amount 100
+	@python manage.py command_to_generate_contacts --amount 100

@@ -1,0 +1,19 @@
+{% extends '_helpers/_base.html' %}
+
+{% block content %}
+    <ul>
+        {% for contact in contacts %}
+            <li>
+                <span>{{ contact.name }}</span>
+                <span> - </span>
+                <span>{{ contact.number }}</span>
+                <span>  >>> </span>
+                <span>{{ contact.created_at }}</span>
+                <span> : </span>
+                <span>{{ contact.modified_at }}</span>
+
+            <li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+

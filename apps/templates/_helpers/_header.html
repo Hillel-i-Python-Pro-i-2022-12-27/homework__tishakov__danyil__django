@@ -1,22 +1,10 @@
 <header>
     <ul>
         <li>
-            <a href="{% url 'root:index' %}">Home</a>
+            <a href="{% url 'generator:index' %}">User info</a>
         </li>
         <li>
-            <a href="{% url 'first_example:index' %}">Greetings</a>
-        </li>
-        <li>
-            <a href="{% url 'first_example:hello_with_args' name='Mary' age=52 %}">Greetings with args</a>
-        </li>
-        <li>
-            <a href="{% url 'first_example:humans' %}">Humans</a>
-        </li>
-        <li>
-            <a href="{% url 'animals:list_by_function' %}">Animals by list</a>
-        </li>
-        <li>
-            <a href="{% url 'animals:list_by_class' %}">Animals by class</a>
+            <a href="{% url 'contacts:list' %}">Contact list</a>
         </li>
     </ul>
 </header>

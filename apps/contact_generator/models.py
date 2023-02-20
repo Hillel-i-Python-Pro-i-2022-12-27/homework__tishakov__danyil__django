@@ -1,9 +1,10 @@
 from django.db import models
+from phone_field import PhoneField
 
 
 class Contact(models.Model):
     name = models.CharField(max_length=50)
-    number = models.IntegerField()
+    number = PhoneField(blank=True, help_text="Contact phone number")
 
     created_at = models.DateTimeField(auto_now_add=True)
     modified_at = models.DateTimeField(auto_now=True)
@@ -14,16 +15,3 @@ class Contact(models.Model):
         return f'{self.name}-{self.number}'
 
     __repr__ = __str__
-
-    # @classmethod
-    # def generate_of_contacts(amount: int = 10):
-    #     from faker import Faker
-    #     fake = Faker
-    #     for _ in range(amount):
-    #         yield models.Contact(
-    #             name=fake.name(),
-    #             number=fake.phone_number(),
-    #         )
-
-
-
