@@ -12,6 +12,6 @@ class Contact(models.Model):
     is_auto_generated = models.BooleanField(default=False)
 
     def __str__(self) -> str:
-        return f'{self.name}-{self.number}'
+        return f"{self.name}-{self.number}"
 
     __repr__ = __str__

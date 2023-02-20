@@ -25,4 +25,3 @@ class Command(BaseCommand):
         for data in generate_of_contacts(amount=amount, is_auto_generated=True):
             data.save()
         logger.info(f"Current amount of contacts after: {queryset.count()}")
-

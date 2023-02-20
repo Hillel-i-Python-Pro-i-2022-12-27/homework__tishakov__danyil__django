@@ -2,7 +2,6 @@ import logging
 
 from django.core.management.base import BaseCommand
 from apps.contact_generator.models import Contact
-from apps.contact_generator.services.generate_contacts import generate_of_contacts
 
 
 class Command(BaseCommand):
@@ -25,6 +24,6 @@ class Command(BaseCommand):
             queryset_for_delete = queryset_for_delete.filter(is_auto_generated=True)
 
         total_deleted, details = queryset_for_delete.delete()
-        logger.info(f'Total deleted: {total_deleted}, details: {details}')
+        logger.info(f"Total deleted: {total_deleted}, details: {details}")
 
         logger.info(f"Current amount of contacts after: {queryset.count()}")
