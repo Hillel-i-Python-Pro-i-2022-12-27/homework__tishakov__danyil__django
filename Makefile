@@ -60,3 +60,18 @@ pre-commit-run:
 # Run tools for all files.
 pre-commit-run-all:
 	@pre-commit run --all-files
+
+.PHONY: migrations
+#Make migrations
+migrations:
+	@python manage.py makemigrations
+
+.PHONY: migrate
+#Migrate
+migrate:
+	@python manage.py migrate
+
+.PHONY: django-i-generator-contact-i-100
+#Cenerate 100 contact(name, number)
+django-i-generator-contact-i-100:
+	@python manage.py command_to_generate_contacts --amount 100
