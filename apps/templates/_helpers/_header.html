@@ -1,10 +1,16 @@
 <header>
     <ul>
         <li>
+            <a href="{% url 'generator:home_page' %}">Home Page</a>
+        </li>
+        <li>
             <a href="{% url 'generator:index' %}">User info</a>
         </li>
         <li>
-            <a href="{% url 'contacts:list' %}">Contact list</a>
+            <a href="{% url 'contacts:list_by_function' %}">Contact list by function</a>
+        </li>
+        <li>
+            <a href="{% url 'contacts:list_by_class' %}">Contact list by class</a>
         </li>
     </ul>
 </header>

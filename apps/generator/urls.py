@@ -5,5 +5,6 @@ from apps.generator import views
 app_name = "generator"
 
 urlpatterns = [
-    path("info/", views.index, name="index"),
+    path("user/", views.index, name="index"),
+    path("", views.home_page, name="home_page"),
 ]
