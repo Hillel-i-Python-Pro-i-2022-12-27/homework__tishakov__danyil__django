@@ -1,8 +1,13 @@
 {% extends '_helpers/_base.html' %}
 
 {% block content %}
+    <a href="{% url "contacts:create" %}">
+        <button>
+            Create
+        </button>
+    </a>
     <ul>
-        {% for contact in contacts %}
+        {% for contact in object_list %}
             <li>
                 <span>{{ contact.name }}</span>
                 <span> - </span>
@@ -11,7 +16,11 @@
                 <span>{{ contact.created_at }}</span>
                 <span> : </span>
                 <span>{{ contact.modified_at }}</span>
-
+                <a href="{% url "contacts:update" pk=contact.id %}">
+                    <button>
+                        Edit
+                    </button>
+                </a>
             <li>
         {% endfor %}
     </ul>
