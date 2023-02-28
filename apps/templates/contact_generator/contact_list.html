@@ -21,6 +21,11 @@
                         Edit
                     </button>
                 </a>
+                <a href="{% url "contacts:delete" pk=contact.id %}">
+                    <button>
+                        Delete
+                    </button>
+                </a>
             <li>
         {% endfor %}
     </ul>

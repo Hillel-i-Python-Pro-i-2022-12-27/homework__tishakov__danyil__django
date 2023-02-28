@@ -11,4 +11,5 @@ urlpatterns = [
     ])),
     path("create/", views.ContactCreateView.as_view(), name="create"),
     path("update/<int:pk>/", views.ContactUpdateView.as_view(), name="update"),
+    path("delete/<int:pk>/", views.ContactDeleteView.as_view(), name="delete"),
 ]
