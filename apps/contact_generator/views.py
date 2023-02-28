@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.urls import reverse_lazy
-from django.views.generic import ListView, CreateView, UpdateView, DeleteView, DetailView
+from django.views.generic import ListView, CreateView, UpdateView
 
 from apps.contact_generator.models import Contact
 
@@ -8,7 +8,7 @@ from apps.contact_generator.models import Contact
 def list_contacts(request):
     return render(
         request=request,
-        template_name="contact_generator/contact_list.html",
+        template_name="contact_view/contact_view.html",
         context={
             "object_list": Contact.objects.all(),
         },
@@ -17,37 +17,23 @@ def list_contacts(request):
 
 class ContactListView(ListView):
     model = Contact
-    # queryset = Contact.objects.all().order_by("modified_at")
-
-
-class ContactDetailView(DetailView):
-    model = Contact
-
 
 class ContactCreateView(CreateView):
     model = Contact
     fields = (
-        "id",
         "name",
-        "nationality",
         "number",
         "is_auto_generated",
     )
-    success_url = reverse_lazy("contacts:list_by_class")
-
+    success_url = reverse_lazy("contacts:list_by_functions")
 
 class ContactUpdateView(UpdateView):
     model = Contact
     fields = (
         "id",
-        "name",
-        "nationality",
+    "name",
         "number",
         "is_auto_generated",
     )
-    success_url = reverse_lazy("contacts:list_by_class")
+    success_url = reverse_lazy("contacts:list_by_functions")
 
-
-class ContactDeleteView(DeleteView):
-    model = Contact
-    success_url = reverse_lazy("contacts:list_by_class")
