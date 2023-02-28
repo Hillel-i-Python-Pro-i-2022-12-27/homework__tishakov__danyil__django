@@ -31,7 +31,7 @@ class ContactUpdateView(UpdateView):
     model = Contact
     fields = (
         "id",
-    1"name",
+        "name",
         "number",
         "is_auto_generated",
     )
