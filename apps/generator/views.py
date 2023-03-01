@@ -7,9 +7,7 @@ fake = Faker("en_US")
 
 
 def home_page(request):
-    return render(request=request,
-                  template_name="index.html",
-                  context={})
+    return render(request=request, template_name="index.html", context={})
 
 
 def index(request: WSGIRequest):
