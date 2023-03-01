@@ -19,6 +19,7 @@ class ContactListView(ListView):
     model = Contact
     # queryset = Contact.objects.all().order_by("modified_at")
 
+
 class ContactCreateView(CreateView):
     model = Contact
     fields = (
@@ -27,6 +28,7 @@ class ContactCreateView(CreateView):
         "is_auto_generated",
     )
     success_url = reverse_lazy("contacts:list_by_class")
+
 
 class ContactUpdateView(UpdateView):
     model = Contact
@@ -37,6 +39,7 @@ class ContactUpdateView(UpdateView):
         "is_auto_generated",
     )
     success_url = reverse_lazy("contacts:list_by_class")
+
 
 class ContactDeleteView(DeleteView):
     model = Contact
