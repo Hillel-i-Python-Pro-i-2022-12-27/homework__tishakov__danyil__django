@@ -36,7 +36,6 @@ class ContactCreateView(CreateView):
     success_url = reverse_lazy("contacts:list_by_class")
 
 
-
 class ContactUpdateView(UpdateView):
     model = Contact
     fields = (
