@@ -1,7 +1,8 @@
+import secrets
+
 from django.core.handlers.wsgi import WSGIRequest
 from django.shortcuts import render
 from faker import Faker
-import secrets
 
 fake = Faker("en_US")
 
