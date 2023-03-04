@@ -1,6 +1,7 @@
 import logging
 
 from django.core.management.base import BaseCommand
+
 from apps.contact_generator.models import Contact
 from apps.contact_generator.services.generate_contacts import generate_of_contacts
 
