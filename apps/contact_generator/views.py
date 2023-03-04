@@ -19,6 +19,7 @@ class ContactListView(ListView):
     model = Contact
     # queryset = Contact.objects.all().order_by("modified_at")
 
+
 class ContactDetailView(DetailView):
     model = Contact
 
