@@ -12,21 +12,13 @@
                 <p> {{ contact.name }}
 
                     <a href="{% url 'contacts:update' pk=contact.id %}">
-                        <button>
-                            Edit
-                        </button>
+                        Edit
                     </a>
-
                     <a href="{% url 'contacts:delete' pk=contact.id %}">
-                       <button>
-                           Delete
-                       </button>
+                        Delete
                     </a>
-
                     <a href="{% url 'contacts:detail' pk=contact.id %}">
-                        <button>
-                            Details
-                        </button>
+                        Details
                     </a>
                 </p>
                 <p>Phone number: {{ contact.number }}</p>
