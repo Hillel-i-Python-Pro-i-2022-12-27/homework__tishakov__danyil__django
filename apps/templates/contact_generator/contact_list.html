@@ -17,21 +17,21 @@
                         <span>(add nationality)</span>
                     {% endif %}
                     <a href="{% url 'contacts:update' pk=contact.id %}">
-                        <button>
+
                             Edit
-                        </button>
+
                     </a>
 
                     <a href="{% url 'contacts:delete' pk=contact.id %}">
-                        <button>
+
                             Delete
-                        </button>
+
                     </a>
 
                     <a href="{% url 'contacts:detail' pk=contact.id %}">
-                        <button>
+
                             Details
-                        </button>
+
                     </a>
                 </p>
                 <p>Phone number: {{ contact.number }}</p>
