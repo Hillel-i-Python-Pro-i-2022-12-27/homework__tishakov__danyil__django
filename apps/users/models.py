@@ -1,8 +1,13 @@
-# from django.contrib.auth.models import AbstractUser, BaseUserManager, PermissionsMixin
-#
-#
-# class User(AbstractUser):
-#     pass
+from django.contrib.auth.models import (
+    AbstractUser,
+)
+
+
+class User(AbstractUser):
+    pass
+
+
+# no
 
 
 # class MyUserManager(BaseUserManager):
@@ -11,11 +16,7 @@
 #             raise ValueError("Input your email")
 #         if not username:
 #             raise ValueError("Input your username")
-#         user = self.model(
-#             email=self.normalize_email(email),
-#             username=username,
-#             **extra_fields
-#         )
+#         user = self.model(email=self.normalize_email(email), username=username, **extra_fields)
 #         user.set_password(password)
 #         user.save(using=self._db)
 #         return user
