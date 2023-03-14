@@ -1,33 +1,42 @@
 {% extends '_helpers/_base.html' %}
 
 {% block content %}
-    <a href="{% url "contacts:create" %}">
-        <button>
-            Create
+    <a href="{% url 'contacts:create' %}">
+        <button type="button" class="btn btn-success">
+            Create new contact
         </button>
     </a>
-    <ul>
+    <ol>
         {% for contact in object_list %}
-            <li>
-                <span>{{ contact.name }}</span>
-                <span> - </span>
-                <span>{{ contact.number }}</span>
-                <span>  >>> </span>
-                <span>{{ contact.created_at }}</span>
-                <span> : </span>
-                <span>{{ contact.modified_at }}</span>
-                <a href="{% url "contacts:update" pk=contact.id %}">
-                    <button>
-                        Edit
-                    </button>
-                </a>
-                <a href="{% url "contacts:delete" pk=contact.id %}">
-                    <button>
-                        Delete
-                    </button>
-                </a>
-            <li>
+            <li class="row my-element-box">
+                <div class="col  my-element-style">
+                    <div class="my-avatar">
+                        {% if contact.avatar %}
+                            <img src="{{ contact.avatar.url }}" alt="Avatar" class="my-avatar"</img>
+                        {% endif %}
+                    </div>
+                    <div class="my-element-style">
+                        <p> {{ contact.name }}
+                            <span>-</span>
+                            {% if contact.nationality is not None %}
+                                <span> {{ contact.nationality }}</span>
+                            {% else %}
+                                <span>(add nationality)</span>
+                            {% endif %}
+                            <a style="color:#798a65" href="{% url 'contacts:update' pk=contact.id %}">
+                                Edit
+                            </a>
+                            <a style="color:#798a65" href="{% url 'contacts:delete' pk=contact.id %}">
+                                Delete
+                            </a>
+                            <a style="color:#798a65" href="{% url 'contacts:detail' pk=contact.id %}">
+                                Details
+                            </a>
+                        </p>
+                    </div>
+                    <p>Phone number: {{ contact.number }}</p>
+                </div>
+            </li>
         {% endfor %}
-    </ul>
+    </ol>
 {% endblock %}
-
