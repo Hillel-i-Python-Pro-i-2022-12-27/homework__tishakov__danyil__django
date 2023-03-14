@@ -22,6 +22,13 @@ class Contact(models.Model):
 
     is_auto_generated = models.BooleanField(default=False)
 
+    avatar = models.ImageField(
+        max_length=255,
+        upload_to="contact/avatar",
+        blank=True,
+        null=True,
+    )
+
     nationality = models.ForeignKey(
         Nationality,
         on_delete=models.CASCADE,

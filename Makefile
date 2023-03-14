@@ -76,7 +76,7 @@ migrate:
 django-i-generator-contact-i-100:
 	@python manage.py command_to_generate_contacts --amount 100
 
-.PHONY: superuser
+.PHONY: createsuperuser
 #Migrate
 superuser:
 	@DJANGO_SUPERUSER_PASSWORD=admin123 python manage.py creates

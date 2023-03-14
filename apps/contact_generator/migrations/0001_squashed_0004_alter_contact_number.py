@@ -5,7 +5,6 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     replaces = [
         ("contact_generator", "0001_initial"),
         ("contact_generator", "0002_contact_is_auto_generated"),

@@ -31,6 +31,7 @@ class ContactCreateView(CreateView):
         "name",
         "nationality",
         "number",
+        "avatar",
         "is_auto_generated",
     )
     success_url = reverse_lazy("contacts:list_by_class")
@@ -43,6 +44,7 @@ class ContactUpdateView(UpdateView):
         "name",
         "nationality",
         "number",
+        "avatar",
         "is_auto_generated",
     )
     success_url = reverse_lazy("contacts:list_by_class")
