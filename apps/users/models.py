@@ -1,8 +1,8 @@
-from django.contrib.auth.models import AbstractUser, BaseUserManager, PermissionsMixin
-
-
-class User(AbstractUser):
-    pass
+# from django.contrib.auth.models import AbstractUser, BaseUserManager, PermissionsMixin
+#
+#
+# class User(AbstractUser):
+#     pass
 
 
 # class MyUserManager(BaseUserManager):
