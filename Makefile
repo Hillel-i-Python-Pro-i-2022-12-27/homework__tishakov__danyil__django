@@ -80,4 +80,4 @@ django-i-generator-contact-i-100:
 #Migrate
 superuser:
 	@DJANGO_SUPERUSER_PASSWORD=admin123 python manage.py creates
-	uperuser --user admin --email admin@gmail.com --no-input
+	superuser --user admin --email admin@gmail.com --no-input

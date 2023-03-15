@@ -10,3 +10,4 @@ services:
     ports:
       - "8000:8000"
     user: "1000"
+    command: /start.sh
