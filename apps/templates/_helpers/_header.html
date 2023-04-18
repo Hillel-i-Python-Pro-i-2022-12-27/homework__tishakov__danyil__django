@@ -1,17 +1,25 @@
 <header>
+    <head>
+        <style>
+            ul.hr {
+                margin: 0; /* Обнуляем значение отступов */
+                padding: 4px; /* Значение полей */
+            }
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <ul>
-            <img width="200" height="200" src="/media/contact/avatar/2_20230102_120403_0001.jpg" alt="Иллюстрация"</a>
-            <li class="nav-item">
-                <a class="nav link" href="{% url 'generator:home_page' %}">Home Page</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav link" href="{% url 'generator:index' %}">User info</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav link" href="{% url 'contacts:list_by_class' %}">Contact list by class</a>
-            </li>
-        </ul>
-    </nav>
+            ul.hr li {
+                display: inline; /* Отображать как строчный элемент */
+                margin-right: 5px; /* Отступ слева */
+                border: 1px solid #000; /* Рамка вокруг текста */
+                padding: 3px; /* Поля вокруг текста */
+            }
+        </style>
+    </head>
+    <body>
+    <img width="150" height="150" src="/media/contact/avatar/2_20230102_120403_0001.jpg" alt="Иллюстрация" </a>
+    <ul class="hr">
+        <a href="{% url 'generator:home_page' %}">Home Page</a>
+        <a href="{% url 'generator:index' %}">User info</a>
+        <a href="{% url 'contacts:list_by_class' %}">Contact list by class</a>
+    </ul>
+    </body>
 </header>
