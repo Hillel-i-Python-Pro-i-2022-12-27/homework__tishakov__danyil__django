@@ -15,13 +15,21 @@ autoflake==2.0.2
 # [code_style]-[END]
 
 # Core.
-django==4.1.7
+django==4.2.1
+
+# For db fields
 django-phone-field==1.8.1
+
+#For environment variables and configuration.
+django-environ==0.10.0
 
 #For images
 Pillow==9.4.0
 
 #For forms
 crispy-bootstrap5==0.7
+
+#For PostgresSQL communications
+psycopg2-binary==2.9.6
 
 
