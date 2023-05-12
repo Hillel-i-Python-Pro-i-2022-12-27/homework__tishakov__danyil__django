@@ -1,7 +1,7 @@
 {% extends '_helpers/_base.html' %}
 
 {% block content %}
-    <a href="{% url 'contacts:create' %}">
+    <a target="_blank" href="{% url 'contacts:create' %}">
         <button type="button" class="btn btn-success">
             Create new contact
         </button>
@@ -9,10 +9,10 @@
     <ol>
         {% for contact in object_list %}
             <li class="row my-element-box">
-                <div class="col  my-element-style">
+                <div class="col my-element-style">
                     <div class="my-avatar">
                         {% if contact.avatar %}
-                            <img src="{{ contact.avatar.url }}" alt="Avatar" class="my-avatar"</img>
+                            <img width="50" height="50" src="{{ contact.avatar.url }}" alt="Avatar" class="my-avatar">
                         {% endif %}
                     </div>
                     <div class="my-element-style">
@@ -23,13 +23,13 @@
                             {% else %}
                                 <span>(add nationality)</span>
                             {% endif %}
-                            <a style="color:#798a65" href="{% url 'contacts:update' pk=contact.id %}">
-                                Edit
+                            <a target="_blank" style="color:#c2c9bb" href="{% url 'contacts:update' pk=contact.id %}">
+                                Update
                             </a>
-                            <a style="color:#798a65" href="{% url 'contacts:delete' pk=contact.id %}">
+                            <a target="_blank" style="color:#c2c9bb" href="{% url 'contacts:delete' pk=contact.id %}">
                                 Delete
                             </a>
-                            <a style="color:#798a65" href="{% url 'contacts:detail' pk=contact.id %}">
+                            <a target="_blank" style="color:#c2c9bb" href="{% url 'contacts:detail' pk=contact.id %}">
                                 Details
                             </a>
                         </p>
@@ -40,3 +40,4 @@
         {% endfor %}
     </ol>
 {% endblock %}
+
