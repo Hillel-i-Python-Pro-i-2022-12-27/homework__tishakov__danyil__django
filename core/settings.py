@@ -43,6 +43,7 @@ LOCAL_APPS = ["apps.generator", "apps.base", "apps.contact_generator", "apps.use
 
 THIRD_PARTY_APPS = ["phone_field"]
 
+
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS + THIRD_PARTY_APPS
 
 MIDDLEWARE = [

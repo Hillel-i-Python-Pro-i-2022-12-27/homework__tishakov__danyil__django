@@ -10,12 +10,19 @@
         {% for contact in object_list %}
             <li>
                 <p> {{ contact.name }}
-
+                    <span>-</span>
+                    {% if contact.nationality is not None %}
+                        <span> {{contact.nationality}}</span>
+                    {% else %}
+                        <span>(add nationality)</span>
+                    {% endif %}
                     <a href="{% url 'contacts:update' pk=contact.id %}">
                             Edit
                     </a>
                     <a href="{% url 'contacts:delete' pk=contact.id %}">
+
                             Delete
+
                     </a>
                     <a href="{% url 'contacts:detail' pk=contact.id %}">
                             Details

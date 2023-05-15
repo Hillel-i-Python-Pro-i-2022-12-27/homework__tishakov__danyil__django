@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.urls import reverse_lazy
-from django.views.generic import ListView, CreateView, UpdateView, DeleteView, DetailView
+from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 
 from apps.contact_generator.models import Contact
 
@@ -18,10 +18,6 @@ def list_contacts(request):
 class ContactListView(ListView):
     model = Contact
     # queryset = Contact.objects.all().order_by("modified_at")
-
-
-class ContactDetailView(DetailView):
-    model = Contact
 
 
 class ContactCreateView(CreateView):
