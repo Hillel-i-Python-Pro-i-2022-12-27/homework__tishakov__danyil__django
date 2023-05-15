@@ -1,15 +1,14 @@
+import secrets
+
 from django.core.handlers.wsgi import WSGIRequest
 from django.shortcuts import render
 from faker import Faker
-import secrets
 
 fake = Faker("en_US")
 
 
 def home_page(request):
-    return render(request=request,
-                  template_name="index.html",
-                  context={})
+    return render(request=request, template_name="index.html", context={})
 
 
 def index(request: WSGIRequest):
